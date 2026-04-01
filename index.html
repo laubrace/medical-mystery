@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uncover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite">
+      <section id="landing-screen" class="screen is-active" data-screen="landing">
+        <div class="content-wrap">
+          <header class="hero-section">
+            <p class="brand">Uncover</p>
+            <h1>Uncover what’s being missed</h1>
+            <p class="hero-subtitle">
+              A simple way to organize your symptoms, connect the dots, and get clearer next
+              steps—especially when tests come back “normal.”
+            </p>
+            <button class="cta-button" data-go-to="age">Start Uncovering</button>
+            <p class="microcopy">No long forms. Takes just a few minutes.</p>
+          </header>
+
+          <section class="stacked-section validation-section">
+            <h2>If this sounds familiar, you’re in the right place</h2>
+            <div class="validation-grid" role="list" aria-label="Validation examples">
+              <article class="info-card" role="listitem">
+                <h3>Everything looks normal</h3>
+                <p>But you don’t feel normal</p>
+              </article>
+              <article class="info-card" role="listitem">
+                <h3>Symptoms that come and go</h3>
+                <p>With no clear explanation</p>
+              </article>
+              <article class="info-card" role="listitem">
+                <h3>You’ve seen multiple doctors</h3>
+                <p>But still don’t have answers</p>
+              </article>
+              <article class="info-card" role="listitem">
+                <h3>You’re told it’s stress</h3>
+                <p>But something feels off</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="stacked-section">
+            <h2>How Uncover helps</h2>
+            <div class="steps-grid" role="list" aria-label="How it works steps">
+              <article class="step-card" role="listitem">
+                <span class="step-number">01</span>
+                <h3>Capture what’s happening</h3>
+                <p>Symptoms, timeline, anything you’ve noticed</p>
+              </article>
+              <article class="step-card" role="listitem">
+                <span class="step-number">02</span>
+                <h3>We connect patterns</h3>
+                <p>Across your history, labs, and experiences</p>
+              </article>
+              <article class="step-card" role="listitem">
+                <span class="step-number">03</span>
+                <h3>Get clear next steps</h3>
+                <p>So you can advocate for yourself with confidence</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="stacked-section low-energy-panel">
+            <h2>Designed for low-energy days</h2>
+            <ul>
+              <li>No long forms—just a few simple steps</li>
+              <li>Or upload documents and we’ll sort through them for you</li>
+              <li>Save your progress and come back anytime</li>
+            </ul>
+          </section>
+
+          <section class="final-cta">
+            <button class="cta-button" data-go-to="age">Start Uncovering</button>
+            <p class="microcopy">Free to try. No pressure.</p>
+          </section>
+        </div>
+      </section>
+
+      <section id="age-screen" class="screen" data-screen="age">
+        <div class="flow-wrap">
+          <h2>How old are you?</h2>
+          <p>This helps us tailor the next steps in your intake.</p>
+          <label for="age-input">Age</label>
+          <input id="age-input" name="age" type="number" min="0" max="120" placeholder="Enter your age" />
+          <div class="flow-actions">
+            <button class="secondary-button" data-go-to="landing">Back</button>
+            <button class="cta-button" data-go-to="symptoms">Continue</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="symptoms-screen" class="screen" data-screen="symptoms">
+        <div class="flow-wrap">
+          <h2>What symptoms are most affecting you right now?</h2>
+          <p>We’ll organize everything in the next steps.</p>
+          <textarea placeholder="Type anything that feels important"></textarea>
+          <div class="flow-actions">
+            <button class="secondary-button" data-go-to="age">Back</button>
+            <button class="cta-button" data-go-to="premium">Continue</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="premium-screen" class="screen" data-screen="premium" aria-hidden="true">
+        <div class="flow-wrap">
+          <h2>Premium options</h2>
+          <p>This screen is part of the flow and stays hidden until reached.</p>
+          <button class="secondary-button" data-go-to="symptoms">Back</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app-shell.js"></script>
+  </body>
+</html>
